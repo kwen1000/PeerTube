@@ -198,7 +198,7 @@ app.use(advertiseDoNotTrack)
 // ----------- Views, routes and static files -----------
 
 // API
-const apiRoute = '/api/' + API_VERSION
+const apiRoute: string = '/api/' + API_VERSION
 app.use(apiRoute, apiRouter)
 
 // Services (oembed...)
@@ -255,8 +255,8 @@ const server = createWebsocketTrackerServer(app)
 // ----------- Run -----------
 
 async function startApplication () {
-  const port = CONFIG.LISTEN.PORT
-  const hostname = CONFIG.LISTEN.HOSTNAME
+  const port: number = CONFIG.LISTEN.PORT
+  const hostname: number = CONFIG.LISTEN.HOSTNAME
 
   await installApplication()
 
